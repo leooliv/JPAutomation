@@ -2,6 +2,7 @@ package com.jpmorgan.core;
 
 import java.time.Duration;
 import java.util.List;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -29,23 +30,6 @@ public class WebActions {
     return this;
   }
 
-  public WebActions typeEmail(WebElement element, String email) {
-    logger.info("typing email: " + email);
-    try {
-      waitElement(element);
-      element.sendKeys(email);
-    } catch (Exception e) {
-      throw new WebDriverException(
-        "Unable to type the value: '" +
-        email +
-        "' in element: '" +
-        element +
-        "'"
-      );
-    }
-    return this;
-  }
-
   public WebActions typeValue(WebElement element, String value) {
     waitElement(element);
     logger.info("typing value" + value);
@@ -57,6 +41,12 @@ public class WebActions {
     waitElement(element);
     logger.info("Clearing value " + element);
     element.clear();
+    return this;
+  }
+
+  public WebActions clickEnter(WebElement element) {
+    waitElement(element);
+    element.sendKeys(Keys.ENTER);
     return this;
   }
 

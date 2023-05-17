@@ -25,10 +25,7 @@ public class AllureListener extends AllureCucumber7Jvm {
       testCaseFinished -> {
         System.out.println("Test finished 1");
         if (testCaseFinished.getResult().getStatus().is(Status.FAILED)) {
-          if (ChromeDriverFactory.getDriver() != null) System.out.println(
-            "Test finished 2"
-          );
-          Allure
+          if (ChromeDriverFactory.getDriver() != null) Allure
             .getLifecycle()
             .addAttachment(
               "image error - " + LocalDate.now(),
@@ -36,14 +33,10 @@ public class AllureListener extends AllureCucumber7Jvm {
               "png",
               saveScreenShootPNG()
             );
-          // logger.error("TEST CASE FAILED " + testCaseFinished.getTestCase().getName());
         }
 
         if (testCaseFinished.getResult().getStatus().is(Status.PASSED)) {
-          if (ChromeDriverFactory.getDriver() != null) System.out.println(
-            "Test finished 3"
-          );
-          Allure
+          if (ChromeDriverFactory.getDriver() != null) Allure
             .getLifecycle()
             .addAttachment(
               "print screen - " + LocalDate.now(),
@@ -51,7 +44,6 @@ public class AllureListener extends AllureCucumber7Jvm {
               "png",
               saveScreenShootPNG()
             );
-          // logger.info("TEST CASE PASSED " + testCaseFinished.getTestCase().getName());
         }
       }
     );

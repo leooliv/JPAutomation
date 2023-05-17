@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
   plugin = { "pretty", "com.jpmorgan.core.AllureListener" },
   snippets = CucumberOptions.SnippetType.CAMELCASE,
-  features = "src/test/resources/features/ValidateSignUp.feature",
+  features = "src/test/resources/features/ValidateSettings.feature",
   glue = "com.jpmorgan.core",
   tags = "@SignUp"
 )
-public class RunnerSignUpFlowsTest {}
+public class RunnerSettingsFlows {}

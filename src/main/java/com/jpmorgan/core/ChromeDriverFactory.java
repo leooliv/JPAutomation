@@ -17,7 +17,8 @@ public class ChromeDriverFactory {
 
   private static WebDriver createDriver() {
     String chromeDriverPath =
-      "C:/Users/leona/OneDrive/Documentos/A_Programming/JP MORGAN TEST/jp-automation-test-2/src/main/resources/drivers/chromedriver.exe";
+      System.getProperty("user.dir") +
+      "/src/main/resources/drivers/chromedriver.exe";
 
     System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 

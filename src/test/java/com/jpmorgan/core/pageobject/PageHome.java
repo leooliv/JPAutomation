@@ -26,4 +26,7 @@ public class PageHome extends PageModel {
 
   @FindBy(xpath = "//a[text()='Sign in to see your Feed']")
   public WebElement yourFeedSignInLink;
+
+  @FindBy(xpath = "//a[contains(@href, '/profile/') and @class='nav-link']")
+  public WebElement profileLink;
 }

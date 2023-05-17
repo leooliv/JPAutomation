@@ -33,7 +33,6 @@ public class StepsHooks {
     if (getDriver() != null) Allure
       .getLifecycle()
       .addAttachment(scenarioName, "image/png", "png", saveScreenShootPNG());
-    System.out.println("Driver after: ");
   }
 
   @AfterAll
