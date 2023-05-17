@@ -1,4 +1,4 @@
-@SignIn @RegressionTest
+@Posts @RegressionTest
 Feature: Performing positive and negative flows related to posts in the platform
     As as user I
     want to be able to verify the account login flow

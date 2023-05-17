@@ -22,7 +22,7 @@ maven/java project.
 
 Download Maven dependencies
 
-* have an ide installed on the machine, which can be intellij or eclipse.
+* have an ide installed on the machine, which can be intellij, eclipse, vscode.
 * run the .feature files found in `/src/test/java/features`
 * [Java JDK 8u341](https://www.oracle.com/br/java/technologies/javase/javase8u211-later-archive-downloads.html)  or
   higher.

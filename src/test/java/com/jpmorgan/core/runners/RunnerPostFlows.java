@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
   snippets = CucumberOptions.SnippetType.CAMELCASE,
   features = "src/test/resources/features/ValidatePost.feature",
   glue = "com.jpmorgan.core",
-  tags = "@SignUp"
+  tags = "@Posts"
 )
 public class RunnerPostFlows {}

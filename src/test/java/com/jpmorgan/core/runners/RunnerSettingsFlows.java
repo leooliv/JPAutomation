@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
   snippets = CucumberOptions.SnippetType.CAMELCASE,
   features = "src/test/resources/features/ValidateSettings.feature",
   glue = "com.jpmorgan.core",
-  tags = "@SignUp"
+  tags = "@Settings"
 )
 public class RunnerSettingsFlows {}
