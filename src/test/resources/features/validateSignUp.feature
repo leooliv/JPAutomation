@@ -8,9 +8,6 @@ Feature: Performing positive and negative flows of account creation
   Scenario Outline: Create an account with correct values for email and password
     Given the user is on home page
     And click the sign up link
-    When the user fills the registration fields <yourName> <email> <password>
+    When the user fills the registration fields
     And click Sign Up button
     Then it should be redirected to the logged home page
-    Examples:
-      | yourName | email                | password |
-      | QATestX  | example767@email.com | test.123 |

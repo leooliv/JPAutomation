@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-  plugin = { "pretty" },
+  plugin = { "pretty", "com.jpmorgan.core.AllureListener" },
   snippets = CucumberOptions.SnippetType.CAMELCASE,
   features = "src/test/resources/features/validateSignUp.feature",
   glue = "com.jpmorgan.core",

@@ -1,5 +1,6 @@
 package com.jpmorgan.core.steps;
 
+import com.github.javafaker.Faker;
 import com.jpmorgan.core.WebActions;
 import com.jpmorgan.core.pageobject.PageHome;
 import com.jpmorgan.core.pageobject.PageSign;
@@ -12,6 +13,7 @@ public class StepsSignUp extends WebActions {
 
   private final PageHome homePg = new PageHome();
   private final PageSign signPg = new PageSign();
+  Faker faker = new Faker();
 
   @Given("the user is on home page")
   public void checkIfHomePage() {
@@ -28,12 +30,16 @@ public class StepsSignUp extends WebActions {
     click(signPg.signUpButton);
   }
 
-  @When("the user fills the registration fields {} {} {}")
-  public void fillRegistrationFields(
-    String username,
-    String email,
-    String password
-  ) {
+  @When("the user fills the registration fields")
+  public void fillRegistrationFields() {
+    String username = faker.name().fullName();
+    String email = faker.internet().emailAddress();
+    String password = faker.internet().password();
+
+    System.out.println(username);
+    System.out.println(email);
+    System.out.println(password);
+
     typeValue(signPg.usernameField, username)
       .typeValue(signPg.emailField, email)
       .typeValue(signPg.passwordField, password);

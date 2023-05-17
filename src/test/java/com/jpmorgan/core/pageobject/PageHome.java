@@ -21,6 +21,9 @@ public class PageHome extends PageModel {
   @FindBy(xpath = "//a[text()='Global Feed']")
   public WebElement globalFeedLink;
 
+  @FindBy(xpath = "//a[text()='Your Feed']")
+  public WebElement yourFeedLink;
+
   @FindBy(xpath = "//a[text()='Sign in to see your Feed']")
   public WebElement yourFeedSignInLink;
 }

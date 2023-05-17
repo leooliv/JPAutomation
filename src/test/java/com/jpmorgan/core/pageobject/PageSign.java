@@ -19,4 +19,15 @@ public class PageSign extends PageModel {
     xpath = "//button[@class='btn btn-lg btn-primary pull-xs-right' and text()='Sign up']"
   )
   public WebElement signUpButton;
+
+  @FindBy(
+    xpath = "//button[@class='btn btn-lg btn-primary pull-xs-right' and text()='Sign in']"
+  )
+  public WebElement signInButton;
+
+  @FindBy(xpath = "//a[text()='Have an account?']")
+  public WebElement haveAccountLink;
+
+  @FindBy(xpath = "//a[text()='Need an account?']")
+  public WebElement needAccountLink;
 }
