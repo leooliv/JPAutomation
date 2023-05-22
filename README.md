@@ -41,7 +41,7 @@ app.log file. You can delete this file after each execution or clear its content
 | `WebActions.class`          | Web Actions API                                  |
 | `ChromeDriverFactory.class` | ChromeDriver Provider API                        |
 | `PageModel.class`           | Class to initialize page objects                 |
-| `AllureListerner.class`     | Allure report configuration                      |
+| `AllureListener.class`     | Allure report configuration                      |
 | `WebDriverException.class`  | Exception configuration for WebActions           |
 
 ### src/main/resources
@@ -83,8 +83,8 @@ The Project is written in the 'BDD' standard
 
 | Types of tests    | command line                                              |
 |-------------------|-----------------------------------------------------------|
-| happy path        | `mvn clean test -Dcucumber.filter.tags=@HappyPath`        |
-| full test         | `mvn clean test -Dcucumber.filter.tags=@RegressionTest`   |
+| happy path        | `mvn clean test -D"cucumber.filter.tags=@HappyPath"`        |
+| full test         | `mvn clean test -D"cucumber.filter.tags=@RegressionTest"`   |
 
 <br>
 
@@ -92,7 +92,7 @@ The Project is written in the 'BDD' standard
 
 | Suite name                        | command line                                                    |
 |-----------------------------------|-----------------------------------------------------------------|
-| Validation Create Account Process | `mvn clean test -Dcucumber.filter.tags=@SignUp`                 |
+| Validation Create Account Process | `mvn clean test -D"cucumber.filter.tags=@SignUp"`                 |
 
 <br>
 
