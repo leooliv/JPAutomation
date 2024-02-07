@@ -1,5 +1,5 @@
 # JPAutomation
-Repository for evaluation test
+Repository for Cucumber (Java) studies
 
 maven/java project.
 
